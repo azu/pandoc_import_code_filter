@@ -5,7 +5,7 @@
 * Install pandoc
 
 ``` sh
-git clone
+git clone https://github.com/azu/pandoc_import_code_filter.git
 npm install
 ```
 
@@ -17,7 +17,7 @@ $ pandoc -f markdown -t markdown --filter import.js
 
 ### Example
 
-Embed format : `$import(file/path)`
+Embed format : `$import(path/to/file)`
 
 Before
 
