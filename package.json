@@ -1,0 +1,15 @@
+{
+    "name": "pandoc_import_code_filter",
+    "version": "0.0.0",
+    "description": "import code filter for pandoc",
+    "main": "import.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "azu",
+    "license": "MIT",
+    "dependencies": {
+        "event-stream": "~3.1.0",
+        "traverse": "~0.6.6"
+    }
+}
