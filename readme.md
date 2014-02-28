@@ -12,7 +12,7 @@ npm install
 ## Usage
 
 ``` sh
-$ pandoc -f markdown_github -t markdown_github --filter ./import.js readme.md
+$ pandoc -f markdown -t markdown --filter ./import.js example.md --atx-headers
 ```
 
 ### Example
