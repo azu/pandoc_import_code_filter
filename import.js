@@ -16,15 +16,17 @@ function inline$importFile(filePath) {
 }
 function main(data) {
     return traverse(data).map(function (obj) {
-        if (obj["t"] === "CodeBlock") {
-            var codeBlock = obj["c"];
-            if (!codeBlock) {
-                return obj;
-            }
-            var body = codeBlock[codeBlock.length - 1];
-            if (is$import(body)) {
-                var filePath = get$importFile(body);
-                codeBlock[codeBlock.length - 1] = inline$importFile(filePath);
+        if ((obj !== null) && ((typeof obj) === 'object') && ('t' in obj)) {
+            if (obj["t"] === "CodeBlock") {
+                var codeBlock = obj["c"];
+                if (!codeBlock) {
+                    return obj;
+                }
+                var body = codeBlock[codeBlock.length - 1];
+                if (is$import(body)) {
+                    var filePath = get$importFile(body);
+                    codeBlock[codeBlock.length - 1] = inline$importFile(filePath);
+                }
             }
         }
     });
